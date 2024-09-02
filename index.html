@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanvasara</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.cdnfonts.com/css/magic-retro" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet" />
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/landing/logo-kanvasara.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo"><img src="images/landing/logo-kanvasara.png" alt="" /></a>
+    <i class="bx bx-menu-alt-right" id="menu-icon"></i>
+    <nav class="navbar">
+      <img src="images/landing/cloud left.png" alt="Cloud Left" class="cloud-left" />
+      <ul>
+        <li><a href="#tentang-kami">Tentang</a></li>
+        <li><a href="game.html">Permainan</a></li>
+        <a href="#">
+          <img src="images/landing/logo-kanvasara.png" class="inner-logo" alt="" />
+        </a>
+        <li><a href="#informasi">Informasi</a></li>
+        <li><a href="#koleksi">Koleksi</a></li>
+      </ul>
+      <img src="images/landing/cloud-right.png" alt="Cloud Right" class="cloud-right" />
+    </nav>
+  </header>
+
+  <section id="header">
+    <div class="background-img">
+      <img src="images/landing/pulau.png" alt="Pulau" />
+    </div>
+    <div class="content">
+      <div class="left-img">
+        <!-- Image source: 
+              https://id.wikipedia.org/wiki/Raden_Saleh
+              https://sarasvati.co.id/en/auction/12/10-lukisan-kontemporer-indonesia-termahal-sepanjang-masa/10/ -->
+        <img src="images/landing/header-left.png" alt="Left Header" />
+      </div>
+      <div class="text-content">
+        <h1>
+          Kanvas <br />
+          Nusantara
+        </h1>
+        <p class="description">
+          Di sini, kamu bisa menemukan berbagai
+          karya seni Indonesia yang keren banget. Dari yang klasik dan tradisional
+          hingga yang super modern dan fresh, setiap lukisan punya cerita dan vibe-nya sendiri.
+          Tunggu apalagi? klik tombol dibawah ini dan jelajahi isinya!
+        </p>
+        <a href="#tentang-kami">
+          <button class="scroll-btn">
+            <i class="bx bx-chevron-down"></i>
+          </button>
+        </a>
+      </div>
+      <div class="right-img">
+        <!-- Image source: https://batam.tribunnews.com/2018/08/04/2-lukisan-maestro-indonesia-raden-saleh-yang-bernilai-miliaran-rupiah-dipamerkan-di-istana-negara?page=all-->
+        <img src="images/landing/header-right.png" alt="Right Header" />
+      </div>
+    </div>
+    <img class="curve" src="images/landing/curve.svg" alt="Curve" />
+  </section>
+
+  <!-- TENTANG KAMI -->
+  <section id="tentang-kami">
+    <div class="container">
+      <div class="column left">
+        <!-- Image source: https://id.pinterest.com/pin/809099889278603893/ -->
+        <img src="images/landing/img_tentang-kami1.png" alt="Image 1" />
+      </div>
+      <div class="column center">
+        <h2>Tentang Kami</h2>
+        <p>
+          Kanvasara ada buat Kamu yang pengen explore keindahan dan kekayaan
+          seni lukis Indonesia dengan cara yang lebih asik. Di sini, Kamu bisa
+          ngeliat karya-karya epic dari para maestro Indonesia. Bareng
+          Kanvasara, belajar dan ngehargain seni jadi lebih fun dan nggak
+          ngebosenin!
+        </p>
+      </div>
+      <div class="column right">
+        <!-- Image source: https://indoartnow.com/artworks/24153 -->
+        <img src="images/landing/img_tentang-kami2.png" alt="Image 2" />
+      </div>
+    </div>
+    <div class="nav-game">
+      <div class="text">
+        <div class="headline">
+          <h1>Coba</h1>
+          <h1 class="span-yellow">Memory Cards</h1>
+        </div>
+        <h5>Coba ingat-ingat! dan temukan pasangannya!</h5>
+      </div>
+      <div class="btn-play">
+        <a href="game.html" class="link">
+          <button>
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 84 84" fill="none">
+                  <path opacity="0.9" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M42 84C65.196 84 84 65.196 84 42C84 18.804 65.196 0 42 0C18.804 0 0 18.804 0 42C0 65.196 18.804 84 42 84ZM54.2469 33.9517L54.2469 33.9516L43.6046 27.6558L43.6045 27.6557C39.3856 25.1598 37.2761 23.9119 35.5452 24.0048C33.6747 24.1053 31.9642 25.1172 30.944 26.7269C30 28.2164 30 30.7123 30 35.7041V48.2959V48.2959C30 53.2877 30 55.7836 30.944 57.2731C31.9642 58.8828 33.6747 59.8947 35.5452 59.9952C37.2761 60.0881 39.3856 58.8402 43.6046 56.3442L54.2469 50.0484C58.4658 47.5524 60.5753 46.3045 61.3622 44.722C62.2126 43.0119 62.2126 40.9881 61.3622 39.278C60.5753 37.6955 58.4659 36.4476 54.2469 33.9517Z"
+                    fill="white" />
+                </svg>
+              </div>
+            </div>
+            <span>Mainkan!</span>
+          </button>
+        </a>
+      </div>
+      <!-- Image source: https://www.pinterest.com/pin/677862181383379423/ -->
+      <img src="images/landing/img_play-game.png" alt="" />
+    </div>
+  </section>
+  <!-- TENTANG KAMI END -->
+
+  <!-- PELUKIS -->
+  <section id="pelukis">
+    <h1>Siapa Seniman Favoritmu?</h1>
+    <div class="micro-slider">
+      <div class="slider-item" data-href="detail-pelukis.html">
+        <!-- Image source: https://www.beerita.id/kisah-sarung-untuk-maestro-affandi-dan-topi-dari-mr-blanco/ -->
+        <img src="images/pelukis/affandi.png" alt="Affandi" />
+        <div class="card-content">
+          <h2>Affandi</h2>
+          <p>Pelukis ekspresionis dengan gaya khas menggunakan tangan.</p>
+          <button>Pelajari</button>
+        </div>
+      </div>
+      <div class="slider-item" data-href="detail-pelukis.html">
+        <!-- Image source: https://dunialukisan-javadesindo.blogspot.com/2020/10/lukisan-potret-basuki-abdullah-dalam.html -->
+        <img src="images/pelukis/basuki-abdullah.png" alt="Basuki Abdullah" />
+        <div class="card-content">
+          <h2>Basuki Abdullah</h2>
+          <p>Master potret dan seni realisme Indonesia yang mendunia.</p>
+          <button>Pelajari</button>
+        </div>
+      </div>
+      <div class="slider-item" data-href="detail-pelukis.html">
+        <!-- Image source: https://www.facebook.com/isaartanddesign/posts/hendra-gunawan-1918-1983-works-are-known-for-portraying-the-life-of-indonesians-/669755767726701/?locale=ms_MY -->
+        <img src="images/pelukis/hendra-gunawan.png" alt="Hendra Gunawan" />
+        <div class="card-content">
+          <h2>Hendra Gunawan</h2>
+          <p>Seniman dengan gaya ekspresif dan warna-warna cerah.</p>
+          <button>Pelajari</button>
+        </div>
+      </div>
+      <div class="slider-item" data-href="detail-pelukis.html">
+        <!-- Image source: https://id.wikipedia.org/wiki/Raden_Saleh -->
+        <img src="images/pelukis/raden-saleh.png" alt="Raden Saleh" />
+        <div class="card-content">
+          <h2>Raden Saleh</h2>
+          <p>Pelopor seni lukis modern Indonesia.</p>
+          <button>Pelajari</button>
+        </div>
+      </div>
+      <div class="slider-item" data-href="detail-pelukis.html">
+        <!-- Image source :https://news.detik.com/x/detail/intermeso/20160720/SS-101-Pelukis-yang-Dikagumi-Bung-Karno/ -->
+        <img src="images/pelukis/sudjojono.png" alt="Soedjojono" />
+        <div class="card-content">
+          <h2>Sindoedarsono Soedjojono</h2>
+          <p>Bapak Seni Lukis Indonesia Modern</p>
+          <button>Pelajari</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/micro-slider@1.0.9/dist/micro-slider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- PELUKIS END -->
+
+  <!-- --- -->
+  <div class="list-wrapper">
+    <ul class="list">
+      <li class="item"><div class="content">Item 1</div></li>
+      <li class="item"><div class="content">Item 2</div></li>
+      <li class="item"><div class="content">Item 3</div></li>
+      <li class="item"><div class="content">Item 4</div></li>
+      <li class="item"><div class="content">Item 5</div></li>
+    </ul>
+    <!-- We're calling `handleClick` with a direction argument when the buttons are clicked -->
+    <button onclick="handleClick('previous')" class="button button--previous" type="button">➜</button>
+    <button onclick="handleClick('next')" class="button button--next" type="button">➜</button>
+  </div>
+  <script>
+    const list = document.querySelector(".list");
+  
+    // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
+    const item = document.querySelector(".item");
+    const itemWidth = item.offsetWidth;
+  
+    function handleClick(direction) {
+      // Based on the direction we call `scrollBy` with the item width we got earlier
+      if(direction === "previous") {
+        list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+      } else {
+        list.scrollBy({ left: itemWidth, behavior: "smooth" });
+      }
+    }
+  </script>
+  <!-- --- -->
+
+  <!-- INFORMASI -->
+  <section id="informasi">
+    <h1>Informasi Terbaru</h1>
+    <img src="images/informasi/cloud-red-left.png" alt="Cloud Left" class="cloud-left" />
+    <div class="card-informasi">
+      <div class="info-content">
+        <article class="info-article">
+          <!-- Image source: https://magazine.urbanicon.co.id/tempat-ngedate/ -->
+          <img src="images/informasi/informasi-art1.png" alt="informasi terbaru" class="card-imagee" />
+
+          <div class="card-data">
+            <span class="card-description">Pameran</span>
+            <h2 class="card-title">
+              Tur Virtual Menjelajah Karya Seni Indonesia di Galeri Nasional
+              Indonesia
+            </h2>
+            <h2 class="card-event">Minggu, 15 September 2024</h2>
+            <a href="#" class="card-button">Selengkapnya<i class="bx bxs-right-top-arrow-circle"></i></a>
+          </div>
+        </article>
+
+        <article class="info-article">
+          <!-- Image source: https://travel.detik.com/fototravel/d-7401936/mengintip-pameran-betawi-punye-gaye -->
+          <img src="images/informasi/informasi-art2.png" alt="informasi terbaru" class="card-imagee" />
+
+          <div class="card-data">
+            <span class="card-description">Pameran</span>
+            <h2 class="card-title">
+              Pameran Betawi Punya Gaye dalam rangka menyuarakkan HUT ke-479
+              Jakarta
+            </h2>
+            <h2 class="card-event">Sabtu, 14 September 2024</h2>
+            <a href="#" class="card-button">Selengkapnya<i class="bx bxs-right-top-arrow-circle"></i></a>
+          </div>
+        </article>
+
+        <article class="info-article">
+          <!-- Image source: https://entertainment.solopos.com/pameran-seni-rupa-perjalanan-07-refleksi-kehidupan-dalam-lukisan-170087 -->
+          <img src="images/informasi/informasi-art3.png" alt="informasi terbaru" class="card-imagee" />
+
+          <div class="card-data">
+            <span class="card-description">Pameran</span>
+            <h2 class="card-title">
+              Pameran Seni Rupa: Refleksi Kehidupan dalam Lukisan
+            </h2>
+            <h2 class="card-event">Senin, 16 September 2024</h2>
+            <a href="#" class="card-button">Selengkapnya<i class="bx bxs-right-top-arrow-circle"></i></a>
+          </div>
+        </article>
+      </div>
+      <a href="informasi.html" class="link">
+        <button class="button-informasi">Lihat Lainnya</button>
+      </a>
+    </div>
+    <img src="images/informasi/cloud-red-right.png" alt="Cloud Right" class="cloud-right" />
+  </section>
+  <!-- INFORMASI END -->
+
+  <!-- KOLEKSI -->
+  <section id="koleksi">
+    <h1>Koleksi</h1>
+    <div class="carousel-container">
+      <!-- Image Source:
+            https://lukisan.art/
+            https://sarasvati.co.id/en/auction/12/10-lukisan-kontemporer-indonesia-termahal-sepanjang-masa/10/
+            https://hi-in.facebook.com/laalfabetacourse/posts/1962645687198864
+            https://hot.detik.com/art/d-5864403/10-peristiwa-culture-terhot-rekor-lukisan-raden-hingga-nasib-dkj
+            https://www.traveloka.com/id-id/explore/destination/lukisan-termahal-di-indonesia-acc/356819
+            https://dunialukisan-javadesindo.blogspot.com/2016/07/sudut-pandang-basuki-abdullah-dalam.html
+            https://serupa.id/affandi/
+      -->
+      <!-- slider 1 -->
+      <div class="carousel" style="
+            --width: 280px;
+            --height: 180px;
+            --quantity: 10;
+            --duration: 45s;
+          ">
+        <div class="carousel__list">
+          <div class="carousel__item" style="--position: 1">
+            <a href="#">
+              <img src="images/koleksi/landing-art1.png" alt="Image 1" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 2">
+            <a href="#">
+              <img src="images/koleksi/landing-art2.png" alt="Image 2" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 3">
+            <a href="#">
+              <img src="images/koleksi/landing-art3.png" alt="Image 3" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 4">
+            <a href="#">
+              <img src="images/koleksi/landing-art4.png" alt="Image 4" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 5">
+            <a href="#">
+              <img src="images/koleksi/landing-art5.png" alt="Image 5" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 6">
+            <a href="#">
+              <img src="images/koleksi/landing-art6.png" alt="Image 6" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 7">
+            <a href="#">
+              <img src="images/koleksi/landing-art7.png" alt="Image 7" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 8">
+            <a href="#">
+              <img src="images/koleksi/landing-art8.png" alt="Image 8" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 9">
+            <a href="#">
+              <img src="images/koleksi/landing-art9.png" alt="Image 9" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 10">
+            <a href="#">
+              <img src="images/koleksi/landing-art10.png" alt="Image 10" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- slider 2 -->
+      <div class="carousel" reverse="true" style="
+            --width: 280px;
+            --height: 180px;
+            --quantity: 10;
+            --duration: 45s;
+          ">
+        <div class="carousel__list">
+          <div class="carousel__item" style="--position: 1">
+            <a href="#">
+              <img src="images/koleksi/landing-art11.jpg" alt="Image 1" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 2">
+            <a href="#">
+              <img src="images/koleksi/landing-art12.jpg" alt="Image 2" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 3">
+            <a href="#">
+              <img src="images/koleksi/landing-art13.jpg" alt="Image 3" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 4">
+            <a href="#">
+              <img src="images/koleksi/landing-art14.jpg" alt="Image 4" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 5">
+            <a href="#">
+              <img src="images/koleksi/landing-art15.png" alt="Image 5" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 6">
+            <a href="#">
+              <img src="images/koleksi/landing-art16.png" alt="Image 6" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 7">
+            <a href="#">
+              <img src="images/koleksi/landing-art17.png" alt="Image 7" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 8">
+            <a href="#">
+              <img src="images/koleksi/landing-art18.png" alt="Image 8" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 9">
+            <a href="#">
+              <img src="images/koleksi/landing-art19.png" alt="Image 9" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 10">
+            <a href="#">
+              <img src="images/koleksi/landing-art20.png" alt="Image 10" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- slider 3 -->
+      <div class="carousel" style="
+            --width: 280px;
+            --height: 180px;
+            --quantity: 10;
+            --duration: 45s;
+          ">
+        <div class="carousel__list">
+          <div class="carousel__item" style="--position: 1">
+            <a href="#">
+              <img src="images/koleksi/landing-art21.png" alt="Image 1" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 2">
+            <a href="#">
+              <img src="images/koleksi/landing-art22.png" alt="Image 2" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 3">
+            <a href="#">
+              <img src="images/koleksi/landing-art23.png" alt="Image 3" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 4">
+            <a href="#">
+              <img src="images/koleksi/landing-art24.png" alt="Image 4" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 5">
+            <a href="#">
+              <img src="images/koleksi/landing-art25.png" alt="Image 5" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 6">
+            <a href="#">
+              <img src="images/koleksi/landing-art26.jpg" alt="Image 6" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 7">
+            <a href="#">
+              <img src="images/koleksi/landing-art27.jpg" alt="Image 7" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 8">
+            <a href="#">
+              <img src="images/koleksi/landing-art28.jpg" alt="Image 8" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 9">
+            <a href="#">
+              <img src="images/koleksi/landing-art29.jpg" alt="Image 9" />
+            </a>
+          </div>
+          <div class="carousel__item" style="--position: 10">
+            <a href="#">
+              <img src="images/koleksi/landing-art30.jpg" alt="Image 10" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- KOLEKSI END -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="top">
+      <div class="footer-text">
+        <h2>Kanvasara</h2>
+        <p>
+          Gimana nih, seru banget kan setelah eksplorasi karya pelukis Nusantara? Setiap goresan kuas mereka punya
+          cerita unik yang bikin kita makin bangga sama kekayaan seni Indonesia. Yuk, dukung dan lestarikan karya-karya
+          luar biasa ini!
+        </p>
+      </div>
+      <div class="footer-image">
+        <!-- Image source: https://sarasvati.co.id/en/auction/12/10-lukisan-kontemporer-indonesia-termahal-sepanjang-masa/10/ -->
+        <img src="images/koleksi/landing-art1.png" alt="Logo" />
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="footer-kontak">
+        <h3>Kontak</h3>
+        <div>
+          <a href="#" class="link">+62 123 456 789</a>
+          <a href="mailto:support@kanvasara.com" class="link">support@kanvasara.com</a>
+        </div>
+      </div>
+      <div class="footer-sosmed">
+        <h3>Media Sosial</h3>
+        <div>
+          <a href="" class="link"><i class="bx bxl-instagram"></i></a>
+          <a href="" class="link"><i class="bx bxl-facebook"></i></a>
+          <a href="" class="link"><i class="bx bxl-youtube"></i></a>
+          <a href="" class="link"><i class="bx bxl-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h3>Navigasi</h3>
+        <div>
+          <a href="#tentang-kami" class="link">
+            <button class="btn-nav">
+              Tentang <i class="bx bx-right-arrow-alt"></i>
+            </button>
+          </a>
+          <a href="game.html" class="link">
+            <button class="btn-nav">
+              Permainan <i class="bx bx-right-arrow-alt"></i>
+            </button>
+          </a>
+          <a href="#informasi" class="link">
+            <button class="btn-nav">
+              Informasi <i class="bx bx-right-arrow-alt"></i>
+            </button>
+          </a>
+          <a href="#koleksi" class="link">
+            <button class="btn-nav">
+              Koleksi <i class="bx bx-right-arrow-alt"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+
+</html>

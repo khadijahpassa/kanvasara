@@ -1,0 +1,354 @@
+:root {
+  --primary-color: #1b1b1b;
+  --bg-color: #f7ebda;
+  --red-color: #a92620;
+  --yellow-color: #fec538;
+  --brown-color: #d1611f;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+body {
+  background-color: var(--yellow-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--yellow-color);
+  height: 100%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.wrapper {
+  box-sizing: content-box;
+  width: 80%;
+  max-width: 600px;
+  padding: 2.5em 3em;
+  background-color: var(--bg-color);
+  position: relative;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  margin: 20px auto;
+}
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.btn-back {
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  background: var(--red-color);
+  color: #ffffff;
+  padding: 10px 1em;
+  margin-top: 10px;
+  border: none;
+  border-radius: 15px;
+  transition: .2s ease-in;
+}
+.btn-back:hover {
+  background-color: #7D130E;
+}
+.wrapper {
+  box-sizing: content-box;
+  width: 26.87em;
+  padding: 2.5em 3em;
+  background-color: white;
+  position: relative;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+}
+.game-container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  gap: 0.6em;
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-item {
+  background-color: var(--yellow-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+}
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2em;
+}
+#moves-count,
+#time {
+  font-size: 2em;
+}
+.card-container {
+  position: relative;
+  width: 6.25em;
+  height: 6.25em;
+  cursor: pointer;
+}
+.card-before,
+.card-after {
+  position: absolute;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--primary-color);
+  transition: transform 0.7s ease-out;
+  backface-visibility: hidden;
+}
+.card-after img {
+  padding: 0.5em;
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-before {
+  background-color: var(--yellow-color);
+  font-size: 2.8em;
+  font-weight: 600;
+}
+.card-after {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+.card-container.flipper .card-before {
+  transform: rotateY(180deg);
+}
+.card-container.flipped .card-after {
+  transform: rotateY(0deg);
+}
+.controls-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--yellow-color);
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.game-title {
+  font-size: 75px;
+  font-family: "Magic Retro";
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: var(--red-color);
+
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+.game-title {
+  animation: pulse 2s infinite;
+}
+.btn button {
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+  font-family: "DM Sans", sans-serif;
+  background: var(--brown-color);
+  color: white;
+  fill: rgb(155, 153, 153);
+  padding: 20px 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  font-weight: 1000;
+}
+.btn button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+.btn button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+.btn button:hover {
+  background: var(--primary-color);
+}
+.btn button:hover .svg-wrapper {
+  transform: scale(1.25);
+  transition: 0.5s linear;
+}
+.btn button:hover svg {
+  transform: translateX(3.2em) scale(1.1);
+  fill: white;
+}
+.btn button:hover span {
+  opacity: 0;
+  transition: 0.5s linear;
+}
+.btn button:active {
+  transform: scale(0.95);
+}
+#stop {
+  font-size: 1.1em;
+  display: block;
+  margin: 1.1em auto 0 auto;
+  background-color: white;
+}
+#result {
+  text-align: center;
+}
+#result h2 {
+  font-size: 2.5em;
+}
+#result h4 {
+  font-size: 1.8em;
+  margin: 0.6em 0 1em 0;
+}
+
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game-description {
+  width: 35em;
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  color: var(--primary-color);
+  opacity: 60%;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  text-align: center;
+  animation: fadeSlideDown 0.4s ease-out;
+}
+.hide {
+  display: none;
+}
+#stop {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .game-description {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .game-description {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .game-title {
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+  }
+  .game-description {
+    width: 80%;
+    font-size: 18px;
+    margin: 0 auto 2.5 auto;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  body,
+  html {
+    height: 100%;
+  }
+  .game-title {
+    font-size: 50px;
+  }
+  .container {
+    height: 100%;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 1.5em;
+    box-shadow: none;
+  }
+}
+@media (max-width: 600px) {
+  .game-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4em;
+  }
+  .card-container {
+    width: 5.5em;
+    height: 5.5em;
+  }
+  .game-title {
+    font-size: 50px;
+  }
+  .wrapper {
+    width: 80%;
+    padding: 2em;
+    margin: 30px auto;
+  }
+}
+@media (max-width: 400px) {
+  .game-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4em;
+  }
+  .card-container {
+    width: 4.5em;
+    height: 4.5em;
+  }
+  .game-title {
+    font-size: 40px;
+  }
+  .btn button {
+    font-size: 20px;
+    padding: 15px 2em;
+  }
+  .wrapper {
+    width: 80%;
+    padding: 1.5em;
+    margin: 40px auto;
+  }
+}

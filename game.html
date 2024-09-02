@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Card Game</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Magic+Retro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="stats-container">
+          <div id="moves-count"></div>
+          <div id="time"></div>
+
+          <button id="home" class="btn-back">Kembali ke Beranda</button>
+        </div>
+        <div class="game-container"></div>
+        <button id="stop" class="hide">Acak ulang</button>
+      </div>
+    </div>
+    <div class="controls-container">
+      <h1 class="game-title">Memory Card Game</h1>
+      <p class="game-description">
+        Hai! Selamat datang di Memory Card Game! Yuk, uji ingatan Kamu dengan
+        cari pasangan lukisan yang sama.
+      </p>
+      <p id="result" class="hide"></p>
+
+      <div id="start" class="btn">
+        <button>
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 84 84"
+                fill="none"
+              >
+                <path
+                  opacity="0.9"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M42 84C65.196 84 84 65.196 84 42C84 18.804 65.196 0 42 0C18.804 0 0 18.804 0 42C0 65.196 18.804 84 42 84ZM54.2469 33.9517L54.2469 33.9516L43.6046 27.6558L43.6045 27.6557C39.3856 25.1598 37.2761 23.9119 35.5452 24.0048C33.6747 24.1053 31.9642 25.1172 30.944 26.7269C30 28.2164 30 30.7123 30 35.7041V48.2959V48.2959C30 53.2877 30 55.7836 30.944 57.2731C31.9642 58.8828 33.6747 59.8947 35.5452 59.9952C37.2761 60.0881 39.3856 58.8402 43.6046 56.3442L54.2469 50.0484C58.4658 47.5524 60.5753 46.3045 61.3622 44.722C62.2126 43.0119 62.2126 40.9881 61.3622 39.278C60.5753 37.6955 58.4659 36.4476 54.2469 33.9517Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+          <span>Mulai Sekarang</span>
+        </button>
+      </div>
+    </div>
+
+    <script src="js/game.js"></script>
+  </body>
+</html>
