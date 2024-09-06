@@ -79,6 +79,12 @@ header {
     color: white;
 }
 
+.navbar ul li a:hover {
+    color: white;
+    font-weight: bold;
+    /* Mengubah font-weight menjadi bold */
+}
+
 .navbar ul img {
     width: 60px;
     height: 60px;
