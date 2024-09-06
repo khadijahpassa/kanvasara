@@ -76,7 +76,7 @@ header {
   width: 150px;
   height: auto;
   position: absolute;
-  top: 0;
+  top: 10px;
   z-index: 50;
 }
 .cloud-left {
@@ -158,9 +158,9 @@ header {
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  transition: ease .5s;
+  transition: ease 0.5s;
 }
-.scroll-btn:hover{
+.scroll-btn:hover {
   transform: scale(1.1);
 }
 
@@ -575,6 +575,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 100vw;
 }
 #pelukis h1 {
@@ -591,52 +592,40 @@ header {
   color: white;
   text-decoration: none;
 }
-.micro-slider {
+.container-slider {
+  margin: 3rem auto;
+  padding: 0 4rem;
+  width: calc(3 * 300px + 2 * 2rem);
   height: 480px;
-  position: relative;
-  width: 100%;
+  width: 100vw;
+  display: flex;
+  gap: 2rem;
+  justify-content: start;
 }
-.micro-slider.fullwidth {
-  height: 480px;
-}
-.micro-slider.fullwidth .slider-item {
-  height: 480px;
-  line-height: 480px;
-  width: 100%;
-}
-.slider-wrapper {
-  overflow: hidden;
-  position: relative;
-  transform-style: preserve-3d;
-  transform-origin: 0 90%;
-}
-.slider-item {
-  color: #fff;
-  display: none;
+
+.item-slider {
+  color: white;
+  display: block;
   font-size: 72px;
   height: 400px;
   width: 300px;
-  position: absolute;
+  position: relative;
   text-align: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
   cursor: pointer;
   border-radius: 12px;
-  overflow: hidden;
-  opacity: 0.5;
 }
-.slider-item img {
+.item-slider img {
   object-fit: cover;
   height: 100%;
-  width: 100%;
+  width: 300px;
   border-radius: 12px;
   transition: transform 0.5s ease;
 }
-.slider-item.active img {
+.item-slider.active img {
   transform: scale(1.1);
 }
 .card-content {
+  width: 300px;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -653,16 +642,16 @@ header {
   transition: 0.3s ease-in-out;
   border-radius: 12px;
 }
-.slider-item h2 {
+.item-slider h2 {
   margin: 40% 0 0;
   font-size: 22px;
   font-weight: 300;
 }
-.slider-item p {
+.item-slider p {
   margin: 5px 0;
   font-size: 14px;
 }
-.slider-item button {
+.item-slider button {
   background-color: var(--brown-color);
   border: none;
   color: white;
@@ -676,69 +665,103 @@ header {
   overflow: hidden;
   transition: 0.3s ease-in-out;
 }
-.slider-item button:hover {
-  background-color: var(--primary-color); 
+.item-slider button:hover {
+  background-color: var(--primary-color);
   transform: scale(1.05);
 }
-/* PELUKIS END */
-
-/* ----- */
-.list {
-  display: flex;
-  gap: 8px;
-  padding: 16px;
-
-  list-style: none;
-  scrollbar-width: none;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+.side-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 100;
+  background-image: linear-gradient(
+    to right,
+    var(--bg-color) 30%,
+    #f7ebda00 60%
+  );
+}
+.side-slider2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 100;
+  background-image: linear-gradient(
+    to left,
+    var(--bg-color) 30%,
+    #f7ebda00 60%
+  );
 }
 
-.item {
-  flex-shrink: 0;
-  width: 80%;
-  height: 90vh;
-
-  background-color: #FFF;
-
-  scroll-snap-align: center;
-}
-
-.content {
+.prev-btn,
+.next-btn {
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-
-  font-family: sans-serif;
-  font-size: 64px;
-  font-weight: bold;
-}
-
-.list-wrapper {
-  position: relative;
-}
-
-.button {
   position: absolute;
   top: 50%;
-
-  width: 3rem;
-  height: 3rem;
-
   transform: translateY(-50%);
+  background-color: var(--brown-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 24px;
+  z-index: 101;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.button--previous {
-  left: 1.5rem;
-
-  transform: rotate(180deg);
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: var(--primary-color);
 }
 
-.button--next {
-  right: 1.5rem;
+.prev-btn {
+  left: 40px;
 }
-/* ----- */
+
+.next-btn {
+  right: 40px;
+}
+
+@media (max-width: 1120px) and (min-width: 1020px) {
+  .container-slider {
+    width: calc(2 * 300px + 1 * 2rem);
+  }
+}
+
+@media (max-width: 1020px) and (min-width: 968px) {
+  .container-slider {
+    width: calc(1 * 300px);
+  }
+}
+
+@media (max-width: 968px) and (min-width: 767px) {
+  .container-slider {
+    width: calc(1 * 300px);
+  }
+}
+
+@media (max-width: 767px) and (min-width: 481px) {
+  .container-slider {
+    width: calc(1 * 300px);
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-slider {
+    width: calc(1 * 300px);
+  }
+}
+
+/* PELUKIS END */
 
 /* INFORMASI */
 #informasi {
@@ -778,7 +801,7 @@ header {
 .card-imagee {
   width: 100%;
   height: auto;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 .card-data {
   width: 90%;
@@ -884,6 +907,9 @@ header {
     padding: 1rem;
     bottom: -8rem;
   }
+  #informasi h1 {
+    font-size: 28px;
+  }
 }
 /* INFORMASI END */
 
@@ -961,6 +987,12 @@ header {
   }
 }
 
+@media (max-width: 799px) {
+  #koleksi h1 {
+    font-size: 28px;
+  }
+}
+
 /* FOOTER */
 footer {
   padding: 4rem;
@@ -1023,7 +1055,7 @@ footer .bottom .footer-kontak div a {
   display: block;
   padding-bottom: 6px;
   text-decoration: none;
-  transition: ease .5s;
+  transition: ease 0.5s;
 }
 footer .bottom .footer-kontak div a:hover {
   text-decoration: underline;
@@ -1042,11 +1074,10 @@ footer .bottom .footer-sosmed div a {
   height: 50px;
   width: 50px;
   font-size: 30px;
-  transition: ease .5s;
+  transition: ease 0.5s;
 }
-footer .bottom .footer-sosmed div a:hover{
+footer .bottom .footer-sosmed div a:hover {
   transform: scale(1.1);
-
 }
 footer .bottom .footer-nav {
   display: flex;
@@ -1081,7 +1112,7 @@ footer .btn-nav i {
   color: var(--red-color);
   transition: ease 0.5s;
 }
-footer .btn-nav:hover i{
+footer .btn-nav:hover i {
   transform: rotate(40deg);
 }
 
@@ -1231,7 +1262,7 @@ footer .btn-nav:hover i{
     align-items: start;
     flex-direction: column;
     gap: 0;
-}
+  }
   .left-img img,
   .right-img img {
     display: none;
