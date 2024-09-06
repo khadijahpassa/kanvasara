@@ -67,6 +67,12 @@ header {
   text-decoration: none;
   font-size: 1.2em;
   color: white;
+  transition: .8s ease;
+}
+
+.navbar ul li a:hover {
+  color: white;
+  font-weight: bold;
 }
 
 .navbar ul img {
@@ -541,6 +547,7 @@ a {
   font-weight: 900;
   transition: transform 0.5s ease;
 }
+
 .button-pelajari:hover {
   background-color: #323131;
   transform: scale(1.1);
