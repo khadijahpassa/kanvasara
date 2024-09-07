@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', () => {
     itemsPerView = calculateItemsPerView();
     updateButtons();
-    moveToIndex(currentIndex); 
+    moveToIndex(currentIndex);
   });
 
   updateButtons();
@@ -96,5 +96,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
-
