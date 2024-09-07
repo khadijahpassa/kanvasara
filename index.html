@@ -504,6 +504,45 @@
     </div>
   </footer>
   <!-- FOOTER END -->
+
+  <div id="customModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Dapatkan Tiketmu Sekarang!🔥</h2>
+      </div>
+      <div class="modal-body">
+        <p>Apakah kamu siap untuk pengalaman seru di exhibiton ini? Langsung beli tiketnya yuk!</p>
+      </div>
+      <div class="modal-footer">
+        <button id="confirmPurchase" class="modal-button confirm">👍🏻 Beli Sekarang</button>
+        <button class="modal-button cancel close">👎🏻 Nanti aja</button>
+      </div>
+    </div>
+  </div>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+
+    $('.card-button').on('click', function (e) {
+      e.preventDefault();
+      $('#customModal').fadeIn();
+    });
+
+
+    $('.close').on('click', function () {
+      $(this).closest('.modal').fadeOut();
+    });
+
+
+    $('#confirmPurchase').on('click', function () {
+      $('#customModal').fadeOut();
+      $('#successModal').fadeIn();
+    });
+  });
+
+</script>
 
 </html>
