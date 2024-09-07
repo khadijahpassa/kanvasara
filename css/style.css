@@ -1031,9 +1031,24 @@ header {
 }
 
 .modal-header h2 {
+  font-family: 'DM Sans', sans-serif;
   text-align: center;
   flex-grow: 1;
   margin: 0;
+}
+
+.modal-img {
+  width: 60%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  text-align: center;
+}
+
+.modal-img img {
+  width: 60%;
+  height: auto;
 }
 
 .modal-body {

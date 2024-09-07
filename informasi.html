@@ -46,7 +46,7 @@
                             Keajaiban Warna dalam Karya Seni Tradisional Nusantara
                         </h2>
                         <h2 class="card-event">Rabu, 12 September 2024</h2>
-                        <a href="#" class="card-button">Beli Tiket</a>
+                        <a href="#" class="card-button">Beli Tiket <i class="bx bxs-right-top-arrow-circle"></i></a>
                     </div>
                 </article>
 
@@ -60,7 +60,7 @@
                             Ritme Bali Merayakan Seni dan Musik Tradisional
                         </h2>
                         <h2 class="card-event">Minggu, 22 September 2024</h2>
-                        <a href="#" class="card-button">Beli Tiket</a>
+                        <a href="#" class="card-button">Beli Tiket <i class="bx bxs-right-top-arrow-circle"></i></a>
                     </div>
                 </article>
 
@@ -74,7 +74,7 @@
                             Seni Kontemporer Papua Mengungkap Cerita dan Budaya
                         </h2>
                         <h2 class="card-event">Selasa, 10 Oktober 2024</h2>
-                        <a href="#" class="card-button">Beli Tiket</a>
+                        <a href="#" class="card-button">Beli Tiket <i class="bx bxs-right-top-arrow-circle"></i></a>
                     </div>
                 </article>
                 <article class="info-article">
@@ -87,7 +87,7 @@
                             Pesona Nusa Menampilkan Karya Seni Multi-Kultural Indonesia
                         </h2>
                         <h2 class="card-event">Senin, 5 November 2024</h2>
-                        <a href="#" class="card-button">Beli Tiket</a>
+                        <a href="#" class="card-button">Beli Tiket <i class="bx bxs-right-top-arrow-circle"></i></a>
                     </div>
                 </article>
                 <article class="info-article">
@@ -101,7 +101,7 @@
                             Daerah
                         </h2>
                         <h2 class="card-event">Rabu, 20 November 2024</h2>
-                        <a href="#" class="card-button">Beli Tiket</a>
+                        <a href="#" class="card-button">Beli Tiket <i class="bx bxs-right-top-arrow-circle"></i></a>
                     </div>
                 </article>
                 <article class="info-article">
@@ -114,7 +114,7 @@
                             Arca dan Akar Menggali Seni Patung dan Kerajinan Tradisional
                         </h2>
                         <h2 class="card-event">Sabtu, 30 November 2024</h2>
-                        <a href="#" class="card-button">Beli Tiket</a>
+                        <a href="#" class="card-button">Beli Tiket <i class="bx bxs-right-top-arrow-circle"></i></a>
                     </div>
                 </article>
             </div>
@@ -182,7 +182,50 @@
         </div>
     </footer>
     <!-- FOOTER END -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Dapatkan Tiketmu Sekarang!🔥</h2>
+            </div>
+            <div class="modal-img">
+                <img src="images/informasi/popup_img.png" alt="">
+            </div>
+            <div class="modal-body">
+                <p>Apakah kamu siap untuk pengalaman seru di exhibition ini? Langsung beli tiketnya yuk!</p>
+            </div>
+            <div class="modal-footer">
+                <button id="confirmPurchase" class="modal-button confirm">👍🏻 Beli Sekarang</button>
+                <button class="modal-button cancel close">👎🏻 Nanti aja</button>
+            </div>
+        </div>
+    </div>
 </body>
-<script src="js/script.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('.card-button').on('click', function (e) {
+            e.preventDefault();
+            $('#customModal').fadeIn();
+        });
+
+
+        $('.close').on('click', function () {
+            $(this).closest('.modal').fadeOut();
+        });
+
+
+        $('#confirmPurchase').on('click', function () {
+            $('#customModal').fadeOut(function () {
+                alert('Woohoo! Tiketmu sudah aman. Sampai ketemu di acara nanti!');
+                $('#successModal').fadeIn();
+            });
+        });
+    });
+
+</script>
+</body>
 
 </html>
