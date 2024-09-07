@@ -97,7 +97,7 @@ const startGameWithDelay = () => {
     hideAllCards();
     enableCardClicks();
     interval = setInterval(timerGenerator, 1000);
-  }, 2000); // Menunggu 2 detik sebelum menyembunyikan kartu
+  }, 2000); 
 };
 
 const enableCardClicks = () => {
@@ -142,9 +142,9 @@ const showWinMessage = () => {
   
   stopButton.innerHTML = "You Won!";
   stopButton.classList.remove("hide");
-  stopButton.disabled = true; // Nonaktifkan tombol agar tidak bisa diklik
+  stopButton.disabled = true; 
 
-  showHomeButton(); // Tampilkan tombol "Kembali ke Beranda"
+  showHomeButton(); 
 };
 
 const hideGameElements = () => {
@@ -155,12 +155,11 @@ const hideGameElements = () => {
 
 const showHomeButton = () => {
   homeButton.classList.remove("hide");
-  homeButton.style.display = "block"; // Menampilkan tombol
+  homeButton.style.display = "block"; 
 };
 
 const hideHomeButton = () => {
   homeButton.classList.add("hide");
-  // homeButton.style.display = "none"; // Menyembunyikan tombol
 };
 
 const initializer = () => {
@@ -187,7 +186,5 @@ stopButton.addEventListener("click", () => {
 });
 
 homeButton.addEventListener("click", () => {
-  // Tambahkan logika untuk kembali ke beranda
-  // Misalnya, kembali ke halaman utama atau mengarahkan ke URL tertentu
-  window.location.href = "index.html"; // Ganti dengan URL beranda Anda
+  window.location.href = "index.html";
 });
